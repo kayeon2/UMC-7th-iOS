@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2C69A0E42CBABC0F001AC12F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C69A0E32CBABC0F001AC12F /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2C69A0822CB55AD3001AC12F /* UMC-iOS-Workbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS-Workbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C69A0E42CBABC0F001AC12F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = "UMC-iOS-Workbook";
 			packageProductDependencies = (
+				2C69A0E32CBABC0F001AC12F /* SnapKit */,
 			);
 			productName = "UMC-iOS-Workbook";
 			productReference = 2C69A0822CB55AD3001AC12F /* UMC-iOS-Workbook.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 2C69A0792CB55AD3001AC12F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2C69A0E22CBABC0F001AC12F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2C69A0832CB55AD3001AC12F /* Products */;
 			projectDirPath = "";
@@ -331,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C69A0E22CBABC0F001AC12F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C69A0E32CBABC0F001AC12F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C69A0E22CBABC0F001AC12F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C69A07A2CB55AD3001AC12F /* Project object */;
 }
