@@ -8,12 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view = userDefaultsview
     }
-
+    
+    private lazy var userDefaultsview: UserDefaultsView = {
+        let view = UserDefaultsView()
+        return view
+    }()
 
 }
 
