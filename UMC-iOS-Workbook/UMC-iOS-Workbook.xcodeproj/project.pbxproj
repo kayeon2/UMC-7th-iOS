@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C69A0E42CBABC0F001AC12F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C69A0E32CBABC0F001AC12F /* SnapKit */; };
+		2C84225F2CD53819007F50E5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2C84225E2CD53819007F50E5 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C69A0E42CBABC0F001AC12F /* SnapKit in Frameworks */,
+				2C84225F2CD53819007F50E5 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = "UMC-iOS-Workbook";
 			packageProductDependencies = (
 				2C69A0E32CBABC0F001AC12F /* SnapKit */,
+				2C84225E2CD53819007F50E5 /* Then */,
 			);
 			productName = "UMC-iOS-Workbook";
 			productReference = 2C69A0822CB55AD3001AC12F /* UMC-iOS-Workbook.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				2C69A0E22CBABC0F001AC12F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2C84225D2CD53819007F50E5 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2C69A0832CB55AD3001AC12F /* Products */;
@@ -350,6 +354,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		2C84225D2CD53819007F50E5 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -357,6 +369,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C69A0E22CBABC0F001AC12F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		2C84225E2CD53819007F50E5 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C84225D2CD53819007F50E5 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
