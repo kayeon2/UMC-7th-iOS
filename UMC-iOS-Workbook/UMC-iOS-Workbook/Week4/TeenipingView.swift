@@ -45,10 +45,11 @@ class TeenipingView: UIView {
         $0.backgroundColor = .black
     }
     
-    private let emptyLabel = UILabel().then {
+    let emptyLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 24, weight: .medium)
         $0.textColor = .black
         $0.text = "휑~"
+        $0.isHidden = true
     }
     
     override init(frame: CGRect) {

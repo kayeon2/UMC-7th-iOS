@@ -32,7 +32,14 @@ class TeenipingViewController: UIViewController {
     
     @objc
     private func segmentedControlValueChanged(segment: UISegmentedControl) {
-        // TODO: segment 인덱스에 따라 collectionview 표시 여부 결정
+        if segment.selectedSegmentIndex == 0 {
+            rootView.teenipingCollectionView.isHidden = false
+            rootView.emptyLabel.isHidden = true
+        }
+        else {
+            rootView.teenipingCollectionView.isHidden = true
+            rootView.emptyLabel.isHidden = false
+        }
     }
 }
 
