@@ -32,7 +32,14 @@ class TeenipingView: UIView {
         )
     }
     
-//    let teenipingCollectionView = UICollectionView()
+    let teenipingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
+        $0.estimatedItemSize = .init(width: 162, height: 144)
+        $0.minimumInteritemSpacing = 12
+    }).then{
+        $0.backgroundColor = .clear
+        $0.isScrollEnabled = false
+        $0.register(TeenipingCollectionViewCell.self, forCellWithReuseIdentifier: TeenipingCollectionViewCell.identifier)
+    }
     
     private let divideLine = UIView().then {
         $0.backgroundColor = .black
@@ -57,7 +64,7 @@ class TeenipingView: UIView {
     private func setupView() {
         [
             segmentedControl,
-//            teenipingCollectionView,
+            teenipingCollectionView,
             divideLine,
             emptyLabel
         ].forEach {
@@ -77,11 +84,11 @@ class TeenipingView: UIView {
             $0.height.equalTo(1)
         }
         
-//        teenipingCollectionView.snp.makeConstraints {
-//            $0.top.equalTo(divideLine.snp.bottom).offset(20)
-//            $0.horizontalEdges.equalToSuperview().inset(19)
-//            $0.bottom.equalToSuperview().inset(74)
-//        }
+        teenipingCollectionView.snp.makeConstraints {
+            $0.top.equalTo(divideLine.snp.bottom).offset(20)
+            $0.horizontalEdges.equalToSuperview().inset(19)
+            $0.bottom.equalToSuperview().inset(74)
+        }
         
         emptyLabel.snp.makeConstraints {
             $0.top.equalTo(divideLine.snp.bottom).offset(301)
