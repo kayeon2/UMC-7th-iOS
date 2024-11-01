@@ -14,7 +14,6 @@ class TeenipingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = rootView
-        self.view.backgroundColor = .white
     }
 
 }

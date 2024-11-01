@@ -10,8 +10,29 @@ import Then
 
 class TeenipingView: UIView {
     
-    let segmentedControl = UISegmentedControl(items: ["티니핑", "not 티니핑"])
-    let teenipingCollectionView = UICollectionView()
+    let segmentedControl = UISegmentedControl(items: ["티니핑", "not 티니핑"]).then {
+        $0.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        $0.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
+        $0.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
+        $0.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+        $0.selectedSegmentIndex = 0
+        $0.setTitleTextAttributes(
+            [
+                NSAttributedString.Key.foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 16, weight: .light)
+            ],
+            for: .normal
+        )
+        $0.setTitleTextAttributes(
+            [
+                NSAttributedString.Key.foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+            ],
+            for: .selected
+        )
+    }
+    
+//    let teenipingCollectionView = UICollectionView()
     
     private let divideLine = UIView().then {
         $0.backgroundColor = .black
@@ -36,11 +57,35 @@ class TeenipingView: UIView {
     private func setupView() {
         [
             segmentedControl,
-            teenipingCollectionView,
+//            teenipingCollectionView,
             divideLine,
             emptyLabel
         ].forEach {
             addSubview($0)
+        }
+        
+        // 오토 레이아웃 설정
+        segmentedControl.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(20)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(19)
+        }
+        
+        divideLine.snp.makeConstraints {
+            $0.top.equalTo(segmentedControl.snp.bottom).offset(20)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(1)
+        }
+        
+//        teenipingCollectionView.snp.makeConstraints {
+//            $0.top.equalTo(divideLine.snp.bottom).offset(20)
+//            $0.horizontalEdges.equalToSuperview().inset(19)
+//            $0.bottom.equalToSuperview().inset(74)
+//        }
+        
+        emptyLabel.snp.makeConstraints {
+            $0.top.equalTo(divideLine.snp.bottom).offset(301)
+            $0.centerX.equalToSuperview()
         }
     }
 }
