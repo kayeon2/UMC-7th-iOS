@@ -81,7 +81,6 @@ class APITestView: UIView {
         stack.axis = axis
         stack.spacing = spacing
         stack.distribution = .fill
-        stack.backgroundColor = .red
         return stack
     }
     

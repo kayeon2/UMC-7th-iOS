@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C69A0E42CBABC0F001AC12F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C69A0E32CBABC0F001AC12F /* SnapKit */; };
 		2C84225F2CD53819007F50E5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2C84225E2CD53819007F50E5 /* Then */; };
+		2CDE81822CF4F3E00074DD80 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2CDE81812CF4F3E00074DD80 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDE81822CF4F3E00074DD80 /* Alamofire in Frameworks */,
 				2C69A0E42CBABC0F001AC12F /* SnapKit in Frameworks */,
 				2C84225F2CD53819007F50E5 /* Then in Frameworks */,
 			);
@@ -87,6 +89,7 @@
 			packageProductDependencies = (
 				2C69A0E32CBABC0F001AC12F /* SnapKit */,
 				2C84225E2CD53819007F50E5 /* Then */,
+				2CDE81812CF4F3E00074DD80 /* Alamofire */,
 			);
 			productName = "UMC-iOS-Workbook";
 			productReference = 2C69A0822CB55AD3001AC12F /* UMC-iOS-Workbook.app */;
@@ -119,6 +122,7 @@
 			packageReferences = (
 				2C69A0E22CBABC0F001AC12F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2C84225D2CD53819007F50E5 /* XCRemoteSwiftPackageReference "Then" */,
+				2CDE81802CF4F3E00074DD80 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2C69A0832CB55AD3001AC12F /* Products */;
@@ -362,6 +366,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		2CDE81802CF4F3E00074DD80 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -374,6 +386,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C84225D2CD53819007F50E5 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		2CDE81812CF4F3E00074DD80 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CDE81802CF4F3E00074DD80 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
